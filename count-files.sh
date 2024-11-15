@@ -7,4 +7,3 @@ echo "El directorio '$directorio' tiene '$contar' archivos"
 else
 echo "El directorio '$directorio' no existe"
 fi
-
