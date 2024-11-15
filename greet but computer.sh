@@ -1,5 +1,3 @@
-
-
 #read -p "Porfavor ingresa tu nombre: " nombre
 
 #echo "Hola $nombre. Bienvenido"
