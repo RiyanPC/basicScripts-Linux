@@ -1,9 +1,11 @@
-if [ "$EUID" -ne 0]; then
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]; then
 echo "Error, este script debe ejecutarse como root" >&2
 exit 1
 fi
 #Directorio analizar
-$directorio_base='/home'
+directorio_base='/home'
 
 #Verificar si el directorio existe
 if [ ! -d "$directorio_base" ]; then 
@@ -11,6 +13,7 @@ echo "El directorio $directorio_base a analizar no existe" >&2
 exit 1
 fi 
 #Listar los directorios en /home
+echo "-------------------------------------"
 echo "Informacion en $directorio_base"
 
 for dir in "$directorio_base"/*; do
@@ -33,5 +36,7 @@ for dir in "$directorio_base"/*; do
         echo "Ocupacion del disco: $ocupacion"
         echo "-------------------------------------"
     fi
-done
+#sudo mv /home/info_directorios.sh /usr/local/bin/info_directorios
+#sudo chmod +x /usr/loca/bin/info_directorios
+#sudo info_directorios
 
