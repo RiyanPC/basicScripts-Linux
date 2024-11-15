@@ -12,3 +12,4 @@ top -bn1 | grep"CPUs" | awk '{print $2 + $4 "%"}'
 
 echo "Espacio del disco"
 df -h
+
