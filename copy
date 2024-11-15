@@ -1,12 +1,13 @@
 if [ "$EUID" -ne 0]; then
-echo "Error, este script debe ejecutarse como root"&2
+echo "Error, este script debe ejecutarse como root" >&2
+exit 1
 fi
 #Directorio analizar
-$directorio_base ='/home'
+$directorio_base='/home'
 
 #Verificar si el directorio existe
-if [ ! -d "$directorio_base"]; then 
-echo "El directorio $directorio_base a analizar no existe"&2
+if [ ! -d "$directorio_base" ]; then 
+echo "El directorio $directorio_base a analizar no existe" >&2
 exit 1
 fi 
 #Listar los directorios en /home
@@ -31,4 +32,6 @@ for dir in "$directorio_base"/*; do
         ocupacion=$(du -sh "$dir" | awk '{print $1}')
         echo "Ocupacion del disco: $ocupacion"
         echo "-------------------------------------"
+    fi
+done
 
