@@ -1,7 +1,3 @@
-
-
-
-
 #!/bin/bash
 # Porcentaje de uso de disco duro
 THRESHOLD=1
