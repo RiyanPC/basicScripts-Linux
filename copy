@@ -1,9 +1,8 @@
-#!/bin/bash
+#if [ "$EUID" -ne 0 ]; then
+#echo "Error, este script debe ejecutarse como root" >&2
+#exit 1
+#fi
 
-if [ "$EUID" -ne 0 ]; then
-echo "Error, este script debe ejecutarse como root" >&2
-exit 1
-fi
 #Directorio analizar
 directorio_base='/home'
 
