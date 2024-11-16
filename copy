@@ -37,6 +37,6 @@ for dir in "$directorio_base"/*; do
         echo "-------------------------------------"
     fi
 #sudo mv /home/info_directorios.sh /usr/local/bin/info_directorios
-#sudo chmod +x /usr/loca/bin/info_directorios
+#sudo chmod +x /usr/local/bin/info_directorios
 #sudo info_directorios
 
