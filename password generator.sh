@@ -1,4 +1,4 @@
-read -p "Ingresa la longitud de la contraseña: " longitud
-password=$(head /dev/urandom | tr -dc 'A-Za-z0-9' | head -c "$longitud")
+read -p "Enter a max value for password: " long
+password=$(head /dev/urandom | tr -dc 'A-Za-z0-9' | head -c "$long")
 
-echo "Tu contraseña es: $password"
+echo "Your password is $password"
